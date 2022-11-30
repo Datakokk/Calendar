@@ -118,3 +118,10 @@ MERN project
   import Swal from 'sweetalert2'
 
   import 'sweetalert2/dist/sweetalert2.min.css'
+
+
+## Redux-toolkit
+  
+  npm install @reduxjs/toolkit
+
+  yarn add @reduxjs/toolkit
