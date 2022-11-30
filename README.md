@@ -61,3 +61,60 @@ MERN project
         />
       </div>
     )
+
+### react-modal
+
+  npm install --save react-modal
+  
+  yarn add react-modal
+
+##### using react-modal
+  import Modal from 'react-modal';
+
+  const customStyles = {
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+    },
+  };
+
+  // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
+  Modal.setAppElement('#yourAppElement');
+
+### React Date Picker
+
+  npm install react-datepicker --save
+
+  yarn add react-datepicker
+
+##### using React Date Picker
+
+  import DatePicker from "react-datepicker";
+
+  import "react-datepicker/dist/react-datepicker.css";
+
+  // CSS Modules, react-datepicker-cssmodules.css
+  // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+
+  const Example = () => {
+    const [startDate, setStartDate] = useState(new Date());
+    return (
+      <DatePicker selected={startDate} onChange={(date:Date) => setStartDate(date)} />
+    );
+  };
+
+### sweetalert2
+
+  yarn add sweetalert2
+
+  npm install sweetalert2
+
+##### using sweetalert2
+
+  import Swal from 'sweetalert2'
+
+  import 'sweetalert2/dist/sweetalert2.min.css'
