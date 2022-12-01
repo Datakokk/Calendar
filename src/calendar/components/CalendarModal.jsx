@@ -1,12 +1,16 @@
-import { useMemo, useState } from "react";
-
-import Modal from "react-modal";
+import { useEffect, useMemo, useState } from "react";
 import { addHours, differenceInSeconds } from "date-fns";
-import DatePicker, { registerLocale } from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
-import nb from 'date-fns/locale/nb';
+
 import Swal from "sweetalert2";
 import 'sweetalert2/dist/sweetalert2.min.css'
+
+import Modal from "react-modal";
+
+import DatePicker, { registerLocale } from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+import nb from 'date-fns/locale/nb';
+import { useCalendarStore, useUiStore } from "../../hooks";
 
 registerLocale('nb', nb);
 
@@ -27,13 +31,15 @@ Modal.setAppElement('#root');
 
 export const CalendarModal = () => {
 
-  const [isOpen, setIsOpen] = useState(true)
+  const { activeEvent, starSavingEvent } = useCalendarStore();
+
+  const { isDataModalOpen, closeDateModal } = useUiStore();
 
   const [formSubmitted, setformSubmitted] = useState( false );
 
   const [formValues, setFormValues] = useState({
-    title: 'Fernando',
-    note : 'Calvo',
+    title: '',
+    notes : '',
     start: new Date(),
     end  : addHours( new Date(), 2 )
   });
@@ -48,9 +54,15 @@ export const CalendarModal = () => {
   }, [formValues.title, formSubmitted])  
 
   const oncloseModal = () => {
-    setIsOpen(false)
+    closeDateModal();
   };
 
+  useEffect(() => {
+    if( activeEvent !== null){
+     setFormValues( {...activeEvent} )
+    }
+  }, [ activeEvent ])
+  
   const onInputChange = ({ target }) => {
     setFormValues({
       ...formValues,
@@ -65,7 +77,7 @@ export const CalendarModal = () => {
     })
   };
 
-  const onSubmit = ( event ) => {
+  const onSubmit = async( event ) => {
     event.preventDefault();
     setformSubmitted( true );
 
@@ -81,13 +93,14 @@ export const CalendarModal = () => {
     console.log(formValues)
 
     // TODO: 
-    // Remover errores en pantall
-    // cerrar el modal
+    await starSavingEvent( formValues );
+    closeDateModal();
+    setformSubmitted( false );
   }
 
   return (
     <Modal
-      isOpen={isOpen}
+      isOpen={ isDataModalOpen} 
       onRequestClose={oncloseModal}
       style={customStyles}
       className="modal"
@@ -149,7 +162,7 @@ export const CalendarModal = () => {
             placeholder="Notater"
             rows="5"
             name="notes"
-            value={ formValues.note }
+            value={ formValues.notes }
             onChange={ onInputChange }
           ></textarea>
           <small id="emailHelp" className="form-text text-muted">Tilleggsinformasjon</small>
