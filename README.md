@@ -1,5 +1,15 @@
 # Calendar
+
 MERN project
+
+## Development 
+
+1.- Rename the file .env.template for .env
+2.- Make the respective changes in the environment variables.
+
+```
+VITE_API_URL=http://localhost:3000/api
+```
 
 ### Install reactrouter(v6) yarn
 
@@ -125,3 +135,9 @@ MERN project
   npm install @reduxjs/toolkit
 
   yarn add @reduxjs/toolkit
+
+## Axios
+
+  yarn add axios
+
+https://axios-http.com/docs/intro
