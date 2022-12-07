@@ -141,3 +141,5 @@ VITE_API_URL=http://localhost:3000/api
   yarn add axios
 
 https://axios-http.com/docs/intro
+
+https://axios-http.com/docs/interceptors
