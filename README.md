@@ -143,3 +143,5 @@ VITE_API_URL=http://localhost:3000/api
 https://axios-http.com/docs/intro
 
 https://axios-http.com/docs/interceptors
+
+ https://javascript.plainenglish.io/http-interceptors-in-react-4dd7a35ba297.
