@@ -67,14 +67,14 @@ export const useAuthStore = () => {
 
     return {
         // Properties
+        errorMessage,
         status,
         user,
-        errorMessage,
 
         // Methods
-        startLogin,
-        startRegister,
         checkAuthToken,
-        startLogout
+        startLogin,
+        startLogout,
+        startRegister,
     };
 };
