@@ -149,3 +149,18 @@ https://axios-http.com/docs/interceptors
 ## import meta issue
 
   https://yarnpkg.com/en/docs/cli/run 
+
+
+## Material
+
+https://es.reactjs.org/tutorial/tutorial.html
+
+https://blog.logrocket.com/top-10-react-component-libraries-for-2020/
+
+https://firebase.google.com/docs/firestore/?gclid=CjwKCAjw_qb3BRAVEiwAvwq6Vmr_iWcEeIUaQkR59-lfBTnTw5mhiJlb0nS21uwcNUM54NnBLwFhFhoCTG4QAvD_BwE
+
+https://jestjs.io/docs/getting-started
+
+https://react-redux.js.org/introduction/getting-started
+
+https://www.youtube.com/watch?v=dNxaP_BTtwQ&list=PLCKuOXG0bPi26-eawizqyLOgM7j66H_4M

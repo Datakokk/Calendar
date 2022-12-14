@@ -1,23 +1,30 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { act, renderHook, waitFor } from "@testing-library/react";
-import { Provider } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 
 import { useAuthStore } from "../../src/hooks/useAuthStore";
-import { authSlice, onLogout, onLogoutCalendar } from "../../src/store";
+import { authSlice, calendarSlice, onLogout, onLogoutCalendar } from "../../src/store";
 import { calendarApi } from "../../src/api";
 import { authenticatedState, initialState, notAuthenticatedState } from "../fixtures/authStates";
 import { testUserCredentials } from "../fixtures/testUser";
+
+// jest.mock('react-redux', () =>({
+//     ...jest.requireActual('react-redux'),
+//     useDispatch: () => (fn) => fn()
+// }))
 
 const getMockStore = (initialState) => {
     return configureStore({
         reducer: {
             auth: authSlice.reducer,
+            calendar:   calendarSlice.reducer,
         },
         preloadedState: {
             auth: { ...initialState }
         }
     })
 };
+
 
 describe('Test on useAuthStore', () => {
 

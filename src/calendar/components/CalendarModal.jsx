@@ -11,6 +11,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import nb from 'date-fns/locale/nb';
 import { useCalendarStore, useUiStore } from "../../hooks";
+import { getEnvVariable } from "../../helpers";
 
 registerLocale('nb', nb);
 
@@ -26,8 +27,11 @@ const customStyles = {
   },
 };
 
-Modal.setAppElement('#root');
+if (process.env.NODE_ENV !== 'test') Modal.setAppElement('#root');   // I find this solution in the internet
 
+// if( getEnvVariable().VITE_MODE !== 'test'){
+//   Modal.setAppElement('#root');
+// }
 
 export const CalendarModal = () => {
 

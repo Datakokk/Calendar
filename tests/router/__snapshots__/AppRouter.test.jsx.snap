@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on <AppRouter /> should display  login if  user is not-authenticated 1`] = `
+<div>
+  <div
+    class="container login-container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-md-6 login-form-1"
+      >
+        <h3>
+          Logg inn
+        </h3>
+        <form>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="loginEmail"
+              placeholder="E-post"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="loginPassword"
+              placeholder="Passord"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="d-grid gap-2"
+          >
+            <input
+              class="btnSubmit"
+              type="submit"
+              value="Login"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        class="col-md-6 login-form-2"
+      >
+        <h3>
+          Melde deg på
+        </h3>
+        <form>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="registerName"
+              placeholder="Navn"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="registerEmail"
+              placeholder="E-post"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="registerPassword"
+              placeholder="Passord"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="registerPassword2"
+              placeholder="Gjenta passord"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="btnSubmit"
+              type="submit"
+              value="Opprett konto"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test on <AppRouter /> should display the calendar if we are authenticated 1`] = `
+<div>
+  <div
+    class="container login-container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col-md-6 login-form-1"
+      >
+        <h3>
+          Logg inn
+        </h3>
+        <form>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="loginEmail"
+              placeholder="E-post"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="loginPassword"
+              placeholder="Passord"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="d-grid gap-2"
+          >
+            <input
+              class="btnSubmit"
+              type="submit"
+              value="Login"
+            />
+          </div>
+        </form>
+      </div>
+      <div
+        class="col-md-6 login-form-2"
+      >
+        <h3>
+          Melde deg på
+        </h3>
+        <form>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="registerName"
+              placeholder="Navn"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="registerEmail"
+              placeholder="E-post"
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="registerPassword"
+              placeholder="Passord"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="form-control"
+              name="registerPassword2"
+              placeholder="Gjenta passord"
+              type="password"
+              value=""
+            />
+          </div>
+          <div
+            class="form-group mb-2"
+          >
+            <input
+              class="btnSubmit"
+              type="submit"
+              value="Opprett konto"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;
