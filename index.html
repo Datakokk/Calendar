@@ -12,5 +12,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // var isProduction = import.meta.env.VITE_MODE === 'production';
+      
+      if( 'serviceWorker' in navigator){
+        navigator.serviceWorker.register('sw.js')
+      }
+    </script>
   </body>
+
 </html>

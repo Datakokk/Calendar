@@ -164,3 +164,75 @@ https://jestjs.io/docs/getting-started
 https://react-redux.js.org/introduction/getting-started
 
 https://www.youtube.com/watch?v=dNxaP_BTtwQ&list=PLCKuOXG0bPi26-eawizqyLOgM7j66H_4M
+
+
+# Worbox CLI - Wizard
+
+  https://developer.chrome.com/docs/workbox/modules/workbox-cli/
+
+  npm install workbox-cli --global
+
+## Wizard for out app
+
+  To start the wizard run:
+
+  npx workbox-cli wizard
+
+### Create service-workbox for our app (important)
+Use this command every time you create a workbox when we haven't set it up manually
+
+  workbox generateSW workbox-config.js or .cjs
+
+### workbox-sw
+
+Create a file in src with this name: sw-template
+
+
+  https://developer.chrome.com/docs/workbox/modules/workbox-sw/
+
+
+In the file sw-template.js add this code from the link overview
+
+  importScripts(
+    'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
+  );
+
+  workbox.precaching.precacheAndRoute( self.__WB_MANIFEST );
+
+In the file workbox-config.cjs add:
+
+  swSrc: 'src/sw-template.js'
+
+  then comment this part of file:
+
+    ignoreURLParametersMatching: [
+	  	/^utm_/,
+	  	/^fbclid$/
+	  ]
+  
+And run this command instead of "workbox generateSW workbox-config.js or .cjs"
+
+  workbox injectManifest 
+
+for easy use, we configured this command in package.json like:
+
+"PWA":  "workbox injectManifest" and then add this command to build in the package.json
+
+"build": "react-scripts build && yarn PWA"
+
+
+#### show online and offline message
+
+We use this package:
+
+  https://www.npmjs.com/package/react-detect-offline
+
+  npm i react-detect-offline 
+
+    or
+
+  yarn add react-detect-offline
+
+After installation we using this package in the Navbar
+
+

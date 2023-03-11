@@ -2,12 +2,13 @@
   "name": "calendar",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && yarn PWA",
     "preview": "vite preview",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "PWA": "workbox injectManifest"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
@@ -16,6 +17,7 @@
     "react": "^18.2.0",
     "react-big-calendar": "^1.5.2",
     "react-datepicker": "^4.8.0",
+    "react-detect-offline": "^2.4.5",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
     "react-redux": "^8.0.5",

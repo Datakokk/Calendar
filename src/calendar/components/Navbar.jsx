@@ -1,5 +1,8 @@
 import { useAuthStore } from "../../hooks"
 
+import { Offline, Online } from "react-detect-offline";
+
+
 export const Navbar = () => {
 
   const {startLogout, user } = useAuthStore();
@@ -12,6 +15,12 @@ export const Navbar = () => {
             { user.name }
         </span>
 
+        <Online>
+          <span className="text-success">Online</span>
+        </Online>
+        <Offline>
+          <span className="text-danger">Offline - Requests will be stored</span>
+        </Offline>
         <button 
           onClick={ startLogout }
           className="btn btn-outline-danger">
