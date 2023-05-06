@@ -132,7 +132,7 @@ VITE_API_URL=http://localhost:3000/api
 
 ## Redux-toolkit
   
-  npm install @reduxjs/toolkit
+  npm install @reduxjs/toolkit react-redux
 
   yarn add @reduxjs/toolkit
 
